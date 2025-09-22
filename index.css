@@ -5,6 +5,7 @@
 
 body{
   font-family: Poppins, sans-serif;
+  max-width: 100%;
 }
 /* navbar */
 
@@ -36,7 +37,7 @@ header .navbar .img-link{
 .grid-container{
   max-width: 100%;
   padding: 0 1rem;
-  margin: 0 auto;
+  margin: 100px auto 0 auto;
   display: grid;
   gap: 1rem;
   grid-template-areas: 
@@ -126,12 +127,19 @@ header .navbar .img-link{
   color: white;
 }
 
+/* footer */
+
+footer{
+  padding: 2rem;
+  text-align: center;
+}
+
 /* make it responsive*/
 
 
 @media only screen and (min-width: 769px){
-  body{
-    padding: 0 4rem;
+  .clickable{
+    font-size: 2.5rem;
   }
   .grid-container{
     grid-template-areas: 
@@ -142,9 +150,20 @@ header .navbar .img-link{
       "cup foam"
       "dimensional dimensional"; 
   }
+
+  footer{
+    padding: 4rem;
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 1101px){
+  body{
+    padding: 0 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
   .grid-container{
     grid-template-areas: 
       "eth eth alphabet"
