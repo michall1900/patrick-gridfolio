@@ -52,7 +52,7 @@ header .navbar .img-link img{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
 }
 
 .open-nav div{
@@ -69,6 +69,7 @@ header .navbar .img-link img{
   margin: 0 auto;
   display: grid;
   gap: 1rem;
+  margin-top: 100px;
   grid-template-areas: 
     "eth eth"
     "alphabet alphabet"
@@ -183,6 +184,7 @@ footer{
     font-size: 2.25rem;
   }
   .grid-container{
+    margin-top: 0;
     grid-template-areas: 
       "eth eth"
       "alphabet traveler"
