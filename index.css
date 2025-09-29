@@ -64,19 +64,20 @@ header .navbar .img-link img{
   border-radius: 10px;
   animation: 0.7s forwards ease;
   animation-direction: normal;
+  animation-name: none;
 }
 
-/* .open-nav .top-line{
+.open-nav.playing-animation .top-line{
   animation-name: rotate-right;
 }
 
-.open-nav .bottom-line{
+.open-nav.playing-animation .bottom-line{
   animation-name: rotate-left;
 }
 
-.open-nav .middle-line{
+.open-nav.playing-animation .middle-line{
   animation-name: fade;
-} */
+}
 
 @keyframes fade{
   from{
