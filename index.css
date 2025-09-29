@@ -5,39 +5,57 @@
 
 body{
   font-family: Poppins, sans-serif;
-  max-width: 100%;
+  padding: 0 1rem;
 }
+
+
 /* navbar */
 
 .header-container{
+  position: fixed;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
-  margin-bottom: 100px;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  left:0;
+  background-color: white;
+  
 }
-.header-container h1{
-  width: 50%;
-}
+
 header .navbar{
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
-  /* width: 400px; */
+  width: 400px;
 }
 
-header .navbar .img-link{
-  transform: scale(0.05);
+header .navbar a{
+  text-decoration: none;
+  color: black;
+}
+header .navbar a:hover{
+  text-decoration: underline;
+}
+header .navbar .img-link img{
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-
+/* open-nav */
+.open-nav{
+  
+  width: 24px;
+  height: 24px;
+  background-color: black;  
+}
 /* grid default*/
 
 .grid-container{
   max-width: 100%;
-  padding: 0 1rem;
-  margin: 100px auto 0 auto;
+  margin: 0 auto;
   display: grid;
   gap: 1rem;
   grid-template-areas: 
@@ -113,7 +131,7 @@ header .navbar .img-link{
   margin: 0;
   padding: 0;
   letter-spacing: 2px;
-  background-color: rgba(255, 255, 255, 0.2); 
+  background-color: rgba(255, 255, 255, 0.1); 
   opacity: 0;
   transition: all 0.2s;
 }
@@ -138,8 +156,19 @@ footer{
 
 
 @media only screen and (min-width: 769px){
+  .header-container{
+    position:static;
+    padding: 4rem 0;
+  }
+  header .navbar{
+    display: flex;
+  }
+
+  header .open-nav{
+    display: none;
+  }
   .clickable{
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .grid-container{
     grid-template-areas: 
@@ -159,7 +188,6 @@ footer{
 
 @media only screen and (min-width: 1101px){
   body{
-    padding: 0 1rem;
     max-width: 90%;
     margin: 0 auto;
   }
